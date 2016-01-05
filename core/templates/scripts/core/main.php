@@ -190,13 +190,13 @@
         <div id="menu">
             <a id="main_logout_button" href="../index.php?a=logout"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_menu_logout.png" width="36" height="27" alt="<?php echo $this->kga['lang']['logout'] ?>" /></a>
             <a id="main_tools_button" href="#" ><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_menu_dropdown.png" width="44" height="27" alt="Menu Dropdown" /></a>
-            <br/><?php echo $this->kga['lang']['logged_in_as']?> <b><?php echo isset($this->kga['user']) ? $this->escape($this->kga['user']['name']) : $this->escape($this->kga['customer']['name'])?></b>
+            <p><?php echo $this->kga['lang']['logged_in_as']?> <b><?php echo isset($this->kga['user']) ? $this->escape($this->kga['user']['name']) : $this->escape($this->kga['customer']['name'])?></b></p>
         </div>
         
         <div id="main_tools_menu">
             <div class="slider">
-                <a href="#" id="main_credits_button"><?php echo $this->kga['lang']['about'] ?> Kimai</a> |
-                <a href="#" id="main_prefs_button"><?php echo $this->kga['lang']['preferences'] ?></a>
+          		<button id="main_credits_button"><?php echo $this->kga['lang']['about'] ?> Kimai</button>
+              <button id="main_prefs_button"><?php echo $this->kga['lang']['preferences'] ?></button>
             </div>
             <div class="end"></div>
         </div>
@@ -226,16 +226,16 @@
 
 
           <div id="dates">
-                  <input type="hidden" id="pick_in" class="date-pick"/>
-                  <a href="#" id="ts_in" onclick="$('#pick_in').datepicker('show');return false"></a> - 
-                  <input type="hidden" id="pick_out" class="date-pick"/>
-                  <a href="#" id="ts_out" onclick="$('#pick_out').datepicker('show');return false"></a>
+            <input type="hidden" id="pick_in" class="date-pick"/>
+            <button id="ts_in" onclick="$('#pick_in').datepicker('show');return false"></button> - 
+            <input type="hidden" id="pick_out" class="date-pick"/>
+            <button id="ts_out" onclick="$('#pick_out').datepicker('show');return false"></button>
           </div>
 
 
           <div id="infos">
               <span id="n_date"></span>&nbsp;
-              <a href="#" title="<?php echo $this->escape($this->kga['lang']['now']);?>" onclick="setTimeframe(new Date(),new Date()); return false;"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin']);?>/grfx/timeframe_now.png" width="12" height="14" alt="Select date of today" /></a>&nbsp;
+              <button title="<?php echo $this->escape($this->kga['lang']['now']);?>" onclick="setTimeframe(new Date(),new Date()); return false;"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin']);?>/grfx/timeframe_now.png" width="12" height="14" alt="Select date of today" /></button>&nbsp;
               <img src="../skins/<?php echo $this->escape($this->kga['conf']['skin']);?>/grfx/g3_display_smallclock.png" width="13" height="13" alt="Display Smallclock" />
               <span id="n_uhr">00:00</span> &nbsp; 
               <img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_display_eye.png" width="15" height="12" alt="Display Eye" />
@@ -264,9 +264,9 @@
             <ul id="ticker"><li id="ticker_customer">&nbsp;</li><li id="ticker_project">&nbsp;</li><li id="ticker_activity">&nbsp;</li></ul>
         </div>
         
-        <div id="buzzer" class="disabled">
+        <button id="buzzer" class="disabled">
             <div>&nbsp;</div>
-        </div>
+        </button>
         <?php endif; ?>
         
     </div>
