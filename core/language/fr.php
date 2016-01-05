@@ -55,6 +55,7 @@ return array(
     "activity" => "Tâche",
     "actions" => "Actions",
     "customers" => "Clients",
+    "customerslist" => "Liste des clients",
     "projects" => "Projets",
     "activities" => "Tâches",
     "admin" => "Admin",
