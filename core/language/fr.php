@@ -59,6 +59,7 @@ return array(
     "projects" => "Projets",
     "projectslist" => "Liste des projets",
     "activities" => "Tâches",
+    "activitieslist" => "Liste des tâches",
     "admin" => "Admin",
     "rowlimit" => "Nombre maximum de lignes",
     "breiteZeitspalte" => "largeur colonne heure",
