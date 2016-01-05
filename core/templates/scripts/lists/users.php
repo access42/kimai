@@ -2,9 +2,9 @@
 	<caption class="sr"><?php echo $this->kga['lang']['userslist'] ?></caption>
   <tbody>
 	<tr class="sr">
-		<td scope="col"><?php echo $this->kga['lang']['actions'] ?></td>
 		<td scope="col"><?php echo $this->kga['lang']['users'] ?></td>
 		<td scope="col"><?php echo $this->kga['lang']['timeworking'] ?></td>
+		<td scope="col"><?php echo $this->kga['lang']['actions'] ?></td>
 	</tr>
     <?php
     if (count($this->users) == 0)
@@ -23,6 +23,13 @@
         {
             ?>
             <tr id="row_user" data-id="<?php echo $user['userID']?>" class="<?php echo $this->cycle(array('odd','even'))->next()?>">
+
+              <!-- name cell -->
+              <td class="clients">
+                <?php echo $this->escape($user['name']) ?>
+              </td>
+              <!-- annotation cell -->
+              <td class="annotation"></td>
               <!--  option cell -->
               <td class="option">
                 <button title="<?php echo $this->kga['lang']['filter'].' '.$user['name']?>" onclick="lists_update_filter('user',<?php echo $user['userID']?>); $(this).blur(); return false;"><img
@@ -30,14 +37,6 @@
                         alt="<?php echo $this->kga['lang']['filter'].' '.$user['name']?>" />
                 </button>
               </td>
-
-              <!-- name cell -->
-              <td class="clients">
-                <?php echo $this->escape($user['name']) ?>
-              </td>
-
-              <!-- annotation cell -->
-              <td class="annotation"></td>
             </tr>
             <?php
         }
