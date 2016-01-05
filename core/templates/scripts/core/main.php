@@ -183,9 +183,9 @@
 
     <div id="top">
         
-        <div id="logo">
-            <img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_logo.png" width="151" height="52" alt="Logo" />
-        </div>
+        <header id="logo" role="banner">
+            <img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_logo.png" width="151" height="52" alt="" />
+        </header>
         
         <div id="menu">
             <a id="main_logout_button" href="../index.php?a=logout"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/g3_menu_logout.png" width="36" height="27" alt="Logout" /></a>
