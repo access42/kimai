@@ -164,13 +164,12 @@ button.selectInvertLink
     float:right;
     background: rgb(202, 202, 202);
     border:1px solid #555;
-    height:12px;
+    height:2em;
     margin:0;
     padding:1px;
-    margin-left:10px;
-    margin-right:8px;
+    margin:0 8px 5px 10px;
     color:#fff;
-    font-size:9px;
+    font-size:0.8em;
 }
 
 
