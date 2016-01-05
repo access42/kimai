@@ -323,71 +323,71 @@
     </div>
 
 <div class="lists" style="display:none">
-<div id="users_head">
-        <input class="livefilterfield" onkeyup="lists_live_filter('users', this.value);" type="text" id="filt_user" name="filt_user"/>
-    <?php echo $this->kga['lang']['users'] ?>
-</div>
 
-<div id="customers_head">
-        <input class="livefilterfield" onkeyup="lists_live_filter('customers', this.value);" type="text" id="filter_customer" name="filter_customer"/>
-    <?php echo $this->kga['lang']['customers'] ?>
-</div>
+	<div class="lists-elt" id="lists-users">
+		<div id="users_head">
+	    <input class="livefilterfield" onkeyup="lists_live_filter('users', this.value);" type="text" id="filt_user" name="filt_user"/>
+			<label for="filt_user"><?php echo $this->kga['lang']['users'] ?></label>
+		</div>
+		<div id="users"><?php echo $this->user_display?></div>
+		<div id="users_foot">
+			<button class="selectAllLink" onclick="lists_filter_select_all('users'); $(this).blur(); return false;"></button>
+			<button class="deselectAllLink" onclick="lists_filter_deselect_all('users'); $(this).blur(); return false;"></button>
+			<button class="selectInvertLink" onclick="lists_filter_select_invert('users'); $(this).blur(); return false;"></button>
+		</div>
+	</div>
 
-<div id="projects_head">
-        <input class="livefilterfield" onkeyup="lists_live_filter('projects', this.value);" type="text" id="filter_project" name="filter_project"/>
-    <?php echo $this->kga['lang']['projects'] ?>
-</div>
+	<div class="lists-elt" id="lists-customers">
+		<div id="customers_head">
+	    <input class="livefilterfield" onkeyup="lists_live_filter('customers', this.value);" type="text" id="filter_customer" name="filter_customer"/>
+			<label for="filter_customer"><?php echo $this->kga['lang']['customers'] ?></label>
+		</div>
+		<div id="customers"><?php echo $this->customer_display?></div>
+		<div id="customers_foot">    
+			<?php if ($this->show_customer_add_button): ?>
+			  <button class="addLink" onclick="floaterShow('floaters.php','add_edit_customer',0,0,450); $(this).blur(); return false;"></button>
+			<?php endif; ?>
+			<button class="selectAllLink" onclick="lists_filter_select_all('customers'); $(this).blur(); return false;"></button>
+			<button class="deselectAllLink" onclick="lists_filter_deselect_all('customers'); $(this).blur(); return false;"></button>
+			<button href="#" class="selectInvertLink" onclick="lists_filter_select_invert('customers'); $(this).blur(); return false;"></button>
+		</div>
+	</div>
+	
+	<div class="lists-elt" id="lists-projects">
+		<div id="projects_head">
+	    <input class="livefilterfield" onkeyup="lists_live_filter('projects', this.value);" type="text" id="filter_project" name="filter_project"/>
+			<label for="filter_project"><?php echo $this->kga['lang']['projects'] ?></label>
+		</div>
+		<div id="projects"><?php echo $this->project_display?></div>
+		<div id="projects_foot">
+			<?php if ($this->show_project_add_button): ?>
+				<button class="addLink" onclick="floaterShow('floaters.php','add_edit_project',0,0,650); $(this).blur(); return false;"></button>
+			<?php endif; ?>
+			<button class="selectAllLink" onclick="lists_filter_select_all('projects'); $(this).blur(); return false;"></button>
+			<button class="deselectAllLink" onclick="lists_filter_deselect_all('projects'); $(this).blur(); return false;"></button>
+			<button class="selectInvertLink" onclick="lists_filter_select_invert('projects'); $(this).blur(); return false;"></button>
+		</div>
+	</div>
 
-<div id="activities_head">
-        <input class="livefilterfield" onkeyup="lists_live_filter('activities', this.value);" type="text" id="filter_activity" name="filter_activity"/>
-    <?php echo $this->kga['lang']['activities']?>
-</div>
+	<div class="lists-elt" id="lists-activities">
+		<div id="activities_head">
+			<input class="livefilterfield" onkeyup="lists_live_filter('activities', this.value);" type="text" id="filter_activity" name="filter_activity"/>
+			<label for="filter_activity"><?php echo $this->kga['lang']['activities']?></label>
+		</div>
+		<div id="activities"><?php echo $this->activity_display?></div>
+		<div id="activities_foot">
+			<?php if ($this->show_activity_add_button): ?>
+				<button class="addLink" onclick="floaterShow('floaters.php','add_edit_activity',0,0,450); $(this).blur(); return false;"></button>
+			<?php endif; ?>
+			<button class="selectAllLink" onclick="lists_filter_select_all('activities'); $(this).blur(); return false;"></button>
+			<button class="deselectAllLink" onclick="lists_filter_deselect_all('activities'); $(this).blur(); return false;"></button>
+			<button class="selectInvertLink" onclick="lists_filter_select_invert('activities'); $(this).blur(); return false;"></button>
+		</div>
+	</div>
 
-<div id="users"><?php echo $this->user_display?></div>
-<div id="customers"><?php echo $this->customer_display?></div>
-<div id="projects"><?php echo $this->project_display?></div>
-<div id="activities"><?php echo $this->activity_display?></div>
-
-<div id="users_foot">
-<a href="#" class="selectAllLink" onclick="lists_filter_select_all('users'); $(this).blur(); return false;"></a>
-<a href="#" class="deselectAllLink" onclick="lists_filter_deselect_all('users'); $(this).blur(); return false;"></a>
-<a href="#" class="selectInvertLink" onclick="lists_filter_select_invert('users'); $(this).blur(); return false;"></a>
-<div style="clear:both"></div>
-</div>
-
-<div id="customers_foot">    
-<?php if ($this->show_customer_add_button): ?>
-        <a href="#" class="addLink" onclick="floaterShow('floaters.php','add_edit_customer',0,0,450); $(this).blur(); return false;"></a>
-<?php endif; ?>
-<a href="#" class="selectAllLink" onclick="lists_filter_select_all('customers'); $(this).blur(); return false;"></a>
-<a href="#" class="deselectAllLink" onclick="lists_filter_deselect_all('customers'); $(this).blur(); return false;"></a>
-<a href="#" class="selectInvertLink" onclick="lists_filter_select_invert('customers'); $(this).blur(); return false;"></a>
-<div style="clear:both"></div>
-</div>
-
-<div id="projects_foot">
-<?php if ($this->show_project_add_button): ?>
-        <a href="#" class="addLink" onclick="floaterShow('floaters.php','add_edit_project',0,0,650); $(this).blur(); return false;"></a>
-<?php endif; ?>
-<a href="#" class="selectAllLink" onclick="lists_filter_select_all('projects'); $(this).blur(); return false;"></a>
-<a href="#" class="deselectAllLink" onclick="lists_filter_deselect_all('projects'); $(this).blur(); return false;"></a>
-<a href="#" class="selectInvertLink" onclick="lists_filter_select_invert('projects'); $(this).blur(); return false;"></a>
-<div style="clear:both"></div>
-</div>
-
-<div id="activities_foot">
-<?php if ($this->show_activity_add_button): ?>
-        <a href="#" class="addLink" onclick="floaterShow('floaters.php','add_edit_activity',0,0,450); $(this).blur(); return false;"></a>
-<?php endif; ?>
-<a href="#" class="selectAllLink" onclick="lists_filter_select_all('activities'); $(this).blur(); return false;"></a>
-<a href="#" class="deselectAllLink" onclick="lists_filter_deselect_all('activities'); $(this).blur(); return false;"></a>
-<a href="#" class="selectInvertLink" onclick="lists_filter_select_invert('activities'); $(this).blur(); return false;"></a>
-<div style="clear:both"></div>
-</div>
-
-<div id="extensionShrink">&nbsp;</div>
-<div id="usersShrink">&nbsp;</div>
-<div id="customersShrink">&nbsp;</div>
+		<div id="extensionShrink">&nbsp;</div>
+		<div id="usersShrink">&nbsp;</div>
+		<div id="customersShrink">&nbsp;</div>
 </div>
     
     <div id="loader">&nbsp;</div>
