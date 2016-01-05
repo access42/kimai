@@ -57,6 +57,7 @@ return array(
     "customers" => "Clients",
     "customerslist" => "Liste des clients",
     "projects" => "Projets",
+    "projectslist" => "Liste des projets",
     "activities" => "Tâches",
     "admin" => "Admin",
     "rowlimit" => "Nombre maximum de lignes",
