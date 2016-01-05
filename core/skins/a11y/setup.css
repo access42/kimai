@@ -1,7 +1,16 @@
 html {
-    min-width:970px;
+	min-width:970px;
 }
 
+*{
+	box-sizing:border-box;
+}
+
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
 a:active {outline: none;}
 a img {border:none;}
 button{

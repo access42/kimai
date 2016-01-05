@@ -1,17 +1,19 @@
+
+.lists{
+	width:98%;
+	margin:auto;
+}
 .lists > #users, .lists > #customers, .lists > #activities, .lists > #projects {
-    height:175px;
-    border-top:none;
     z-index:1;
-    border:1px solid black;
-    margin:0;
-    padding:0;
     background-color:#eee;
-    position:absolute;
-    overflow:auto;
-    left:10px;
 }
 #timeSheet_head {
   padding-left: 0 !important;
+}
+#users, #customers, #projects, #activities,#users_head, #customers_head, #projects_head, #activities_head,#timeSheet_head,#users_foot, #customers_foot, #projects_foot, #activities_foot, .lists table{/**override some js style i cannot found ?**/
+	width:100%!important;
+	height:auto!important;
+	top:auto!important;
 }
 
 #users_head, #customers_head, #projects_head, #activities_head,
@@ -19,11 +21,8 @@
     background: #473F3F !important;
     border:1px solid black;
     border-bottom:none;
-    position:absolute;
-    height:25px;
     text-align:left;
     color:#FFF;
-    left:10px;
     font-size:11px;
     font-weight:bold;
     padding:3px 0 0 5px;
@@ -33,11 +32,8 @@
     background: #473F3F;
     border:1px solid black;
     border-top:none;
-    position:absolute;
-    height:20px;
     text-align:left;
     color:#FFF;
-    left:10px;
     font-size:11px;
     font-weight:bold;
     padding:3px 0 0 5px;
@@ -128,7 +124,15 @@ div#activities td
 {
     border-right:none;
 }
+.lists-elt{
+	width:24.25%;
+	margin-right:1%;
+	float:left;
+}
 
+.lists-elt:last-child{
+	margin-right:0;
+}
 .lists-foot button{
     display:block;
     width:1.5em;
