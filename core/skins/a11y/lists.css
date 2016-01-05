@@ -129,49 +129,31 @@ div#activities td
     border-right:none;
 }
 
-
-a.addLink
+.lists-foot button{
+    display:block;
+    width:1.5em;
+    height:1.2em;
+    float:left;
+    margin-right:5px;
+}
+button.addLink
 {
     background-image: url('grfx/add.png');
-    overflow:hidden;
-    display:block;
-    width:22px;
-    height:16px;
-    float:left;
-    margin-right:5px;
 }
 
-a.selectAllLink
+button.selectAllLink
 {
     background-image: url('grfx/select_all.png');
-    overflow:hidden;
-    display:block;
-    width:22px;
-    height:16px;
-    float:left;
-    margin-right:5px;
 }
 
-a.deselectAllLink
+button.deselectAllLink
 {
     background-image: url('grfx/deselect_all.png');
-    overflow:hidden;
-    display:block;
-    width:22px;
-    height:16px;
-    float:left;
-    margin-right:5px;
 }
 
-a.selectInvertLink
+button.selectInvertLink
 {
     background-image: url('grfx/invert_select.png');
-    overflow:hidden;
-    display:block;
-    width:22px;
-    height:16px;
-    float:left;
-    margin-right:5px;
 }
 
 .livefilterfield {

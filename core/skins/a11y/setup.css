@@ -4,7 +4,10 @@ html {
 
 a:active {outline: none;}
 a img {border:none;}
-
+button{
+	border:0;
+	cursor:pointer;	
+}
 
 body {
     /*background:url('grfx/g3_gui_bg.png') repeat-x 0 105px;*/
