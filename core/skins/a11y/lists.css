@@ -1,41 +1,44 @@
-.lists #users, .lists #customers, .lists #activities, .lists #projects,
-.lists #users_head, .lists #customers_head, .lists #activities_head, .lists #projects_head,
-.lists #users_foot, .lists #customers_foot, .lists #activities_foot, .lists #projects_foot,
-.lists table, .lists table, .lists table, .lists table { 
-	width:auto!important;
-}
-
-.lists #users, .lists #customers, .lists #activities, .lists #projects { 
+.lists > #users, .lists > #customers, .lists > #activities, .lists > #projects {
+    height:175px;
     border-top:none;
     z-index:1;
-    border:1px solid black; 
+    border:1px solid black;
     margin:0;
     padding:0;
     background-color:#eee;
+    position:absolute;
     overflow:auto;
     left:10px;
 }
+#timeSheet_head {
+  padding-left: 0 !important;
+}
 
-#users_head, #customers_head, #projects_head, #activities_head {
-    border:1px solid black; 
+#users_head, #customers_head, #projects_head, #activities_head,
+#timeSheet_head {
+    background: #473F3F !important;
+    border:1px solid black;
     border-bottom:none;
-    background-image: url('grfx/g3_table_header.png');
+    position:absolute;
+    height:25px;
     text-align:left;
     color:#FFF;
     left:10px;
-    font-size:0.9em;
+    font-size:11px;
     font-weight:bold;
     padding:3px 0 0 5px;
 }
 
 #users_foot, #customers_foot, #projects_foot, #activities_foot {
-    border:1px solid black; 
+    background: #473F3F;
+    border:1px solid black;
     border-top:none;
-    background-image: url('grfx/g3_table_header.png');
+    position:absolute;
+    height:20px;
     text-align:left;
     color:#FFF;
     left:10px;
-    font-size:0.9em;
+    font-size:11px;
     font-weight:bold;
     padding:3px 0 0 5px;
 }
@@ -96,7 +99,7 @@
 
 div#users>table>tbody>tr>td.annotation,
 div#customers>table>tbody>tr>td.annotation,
-div#projects>table>tbody>tr>td.annotation, 
+div#projects>table>tbody>tr>td.annotation,
 div#activities>table>tbody>tr>td.annotation {
     border-right: none;
 }
@@ -104,16 +107,16 @@ div#activities>table>tbody>tr>td.annotation {
 div#users td.option img,
 div#customers td.option img,
 div#projects td.option img,
-div#activities td.option img 
-{ 
+div#activities td.option img
+{
     margin-top:2px;
 }
 
 div#users td.annotation,
 div#customers td.annotation,
 div#projects td.annotation,
-div#activities td.annotation 
-{ 
+div#activities td.annotation
+{
     width:60px;
     text-align: right;
 }
@@ -121,14 +124,14 @@ div#activities td.annotation
 div#users td,
 div#customers td,
 div#projects td,
-div#activities td 
-{ 
+div#activities td
+{
     border-right:none;
 }
 
 
-button.addLink
-{ 
+a.addLink
+{
     background-image: url('grfx/add.png');
     overflow:hidden;
     display:block;
@@ -138,8 +141,8 @@ button.addLink
     margin-right:5px;
 }
 
-button.selectAllLink
-{ 
+a.selectAllLink
+{
     background-image: url('grfx/select_all.png');
     overflow:hidden;
     display:block;
@@ -149,8 +152,8 @@ button.selectAllLink
     margin-right:5px;
 }
 
-button.deselectAllLink
-{ 
+a.deselectAllLink
+{
     background-image: url('grfx/deselect_all.png');
     overflow:hidden;
     display:block;
@@ -160,8 +163,8 @@ button.deselectAllLink
     margin-right:5px;
 }
 
-button.selectInvertLink
-{ 
+a.selectInvertLink
+{
     background-image: url('grfx/invert_select.png');
     overflow:hidden;
     display:block;
@@ -173,7 +176,7 @@ button.selectInvertLink
 
 .livefilterfield {
     float:right;
-    background-image:url("grfx/filter_bg.jpg");
+    background: rgb(202, 202, 202);
     border:1px solid #555;
     height:12px;
     margin:0;
@@ -183,6 +186,8 @@ button.selectInvertLink
     color:#fff;
     font-size:9px;
 }
+
+
 
 
 .livefilterfield:focus {

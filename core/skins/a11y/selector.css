@@ -1,5 +1,7 @@
 #selector {
-    background: url("grfx/g3_buzzer_display.png") no-repeat;
+    /*background: url("grfx/g3_buzzer_display.png") no-repeat;*/
+    background: #eee;
+    border-radius: 10px;
     color:#51534A;
     overflow:hidden;
     width:224px;
@@ -10,7 +12,6 @@
     right:95px;
     font-size:11px;
     z-index:20;
-
 }
 
 #selector .preselection {
@@ -28,7 +29,6 @@
     display:block;
     float:left;
     padding-left:2px;
-
 }
 
 #selector span.none {

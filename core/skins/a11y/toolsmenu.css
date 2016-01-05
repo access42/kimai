@@ -3,7 +3,7 @@
     display:none;
     z-index:9;
     top:30px;
-    left:257px;
+    left:249px;
     z-index:11;
     height:27px;
 }
@@ -16,9 +16,9 @@
 
 #main_tools_menu div.slider {
     float:left;
-    padding:5px;
+    padding:4px;
     background:url("grfx/tools_slider.png") repeat-x;
-    height:16px;
+    height:18px;
 }
 #main_tools_menu div.end {
     float:left;
@@ -26,5 +26,3 @@
     height:27px;
     width:6px;
 }
-
-

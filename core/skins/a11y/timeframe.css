@@ -1,5 +1,7 @@
 #display {
-    background:url("grfx/g3_display.png") no-repeat;
+    /*background:url("grfx/g3_display.png") no-repeat;*/
+    background: #EEE;
+    border-radius: 10px;
     color: #51534a;
     position:relative;
     margin:0;
@@ -23,7 +25,7 @@
     color: #000;
 }
 
-#dates {    
+#dates {
     font-family:arial,sans-serif;
     font-size:24px;
     width:314px;
@@ -34,7 +36,7 @@
 
 }
 
-#infos {    
+#infos {
     width:314px;
     height:30px;
     text-align:center;
