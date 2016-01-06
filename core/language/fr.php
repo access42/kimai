@@ -35,6 +35,7 @@
  */
 return array(
     "countryCode" => "fr-FR",
+		"countryLang" => "fr",   
     "preferences" => "Préférences",
     "total" => "Total",
     "monatzeit" => "Mois",
@@ -100,6 +101,7 @@ return array(
     "back" => "Retour à la fenêtre de connexion",
     "bye" => "Au revoir!",
     "login" => "Connexion",
+    "loginagain" => "Nouvelle tentative",
     "logout" => "Déconnexion",
     "loggedon" => "Connecté en tant que:",
     "username" => "Usager",

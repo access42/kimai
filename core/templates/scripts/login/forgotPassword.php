@@ -1,6 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="<?php echo $this->kga['lang']['countryLang']?>">
 <head>
 <link rel="SHORTCUT ICON" href="favicon.ico">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -80,7 +79,7 @@ var requestData = <?php echo json_encode($this->requestData); ?>;
                 </label>
                 <input type='password' name="password2" id="password2" />
                 <?php echo $this->selectbox ?>
-                <button id="loginButton" type='submit'></button>
+                <button title="<?php echo $this->kga['lang']['password']?>" id="loginButton" type="submit"><span class="sr"> <?php echo $this->kga['lang']['password']?></span></button>
             </fieldset>
         </form>
       </div>

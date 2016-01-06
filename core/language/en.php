@@ -22,6 +22,7 @@
  */
 return array(
     "countryCode" => "en-EN",
+    "countryLang" => "en",
     "preferences" => "Preferences",
     "total" => "Total",
     "monatzeit" => "Month",
@@ -83,6 +84,7 @@ return array(
     "back" => "Back to login window",
     "bye" => "Bye!",
     "login" => "Login",
+    "loginagain" => "Try login again",
     "logout" => "Logout",
     "loggedon" => "Logged on as user:",
     "username" => "Username",

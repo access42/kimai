@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php echo $this->kga['lang']['countryCode']?>">
+<html lang="<?php echo $this->kga['lang']['countryLang']?>">
 <head>
 <link rel="SHORTCUT ICON" href="favicon.ico">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -89,14 +89,14 @@
                 </label>
                 <input type='password' name="password" id="kimaipassword" />
                 <?php echo $this->selectbox ?>
-                <button id="loginButton" type='submit'></button>
+                <button id="loginButton" type="submit" title="<?php echo $this->kga['lang']['password']?>"><span class="sr"> <?php echo $this->kga['lang']['password']?></span></button>
                 <a id="forgotPasswordLink" href=""><?php echo $this->kga['lang']['forgotPassword'] ?></a>
             </fieldset>
         </form>
       </div>
 
       <div id="forgotPassword">
-<?php echo $this->kga['lang']['passwordReset']['instructions']; ?>
+			<?php echo $this->kga['lang']['passwordReset']['instructions']; ?>
         <form action="">
             <fieldset>
                 <label for="forgotPasswordUsername">
@@ -110,7 +110,6 @@
       </div>
 
       <div id="forgotPasswordConfirmation">
-        <p></p>
         <a class="returnToLogin" href=""><?php echo $this->kga['lang']['passwordReset']['returnToLogin'] ?></a>
       </div>
             
