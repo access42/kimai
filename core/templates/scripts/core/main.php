@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php echo $this->kga['lang']['countryCode']?>">
+<html lang="<?php echo $this->kga['lang']['countryLang']?>">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="noindex,nofollow" />
