@@ -3,30 +3,8 @@
 if ($this->timeSheetEntries)
 {
     ?>
-        <div id="timeSheetTable">
-        
-          <table>
               
-            <colgroup>
-              <col class="option" />
-              <col class="date" />
-              <col class="from" />
-              <col class="to" />
-              <col class="time" />
-<?php if ($this->showRates): ?>
-              <col class="wage" />
-<?php endif; ?>
-              <col class="client" />
-              <col class="project" />
-              <col class="activity" />
-            <?php if ($this->showTrackingNumber) { ?>
-              <col class="description" />
-              <col class="trackingnumber" />
-            <?php } ?>
-              <col class="username" />
-            </colgroup>
-
-            <tbody>
+          
 
     <?php
     $day_buffer     = 0; // last day entry

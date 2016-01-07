@@ -5,24 +5,6 @@
         <?php endif; ?>
     </div>
     <table>
-        <colgroup>
-            <col class="options"/>
-            <col class="date"/>
-            <col class="from"/>
-            <col class="to"/>
-            <col class="time"/>
-            <?php if ($this->showRates): ?>
-                <col class="wage"/>
-            <?php endif; ?>
-            <col class="customer"/>
-            <col class="project"/>
-            <col class="activity"/>
-            <?php if ($this->showTrackingNumber) { ?>
-                <col class="description"/>
-                <col class="trackingnumber"/>
-            <?php } ?>
-            <col class="username"/>
-        </colgroup>
         <tbody>
         <tr>
             <td class="option">&nbsp;</td>
@@ -42,10 +24,7 @@
             <?php } ?>
             <td class="username"><?php echo $this->kga['lang']['username'] ?></td>
         </tr>
-        </tbody>
-    </table>
-</div>
-<div id="timeSheet"><?php echo $this->timeSheet_display ?> </div>
+				<?php echo $this->timeSheet_display ?>
 <script type="text/javascript">
     $(document).ready(function () {
         ts_ext_onload();
