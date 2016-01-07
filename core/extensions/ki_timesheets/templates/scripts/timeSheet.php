@@ -3,9 +3,6 @@
 if ($this->timeSheetEntries)
 {
     ?>
-              
-          
-
     <?php
     $day_buffer     = 0; // last day entry
     $time_buffer    = 0; // last time entry

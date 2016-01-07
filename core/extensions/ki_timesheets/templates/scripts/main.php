@@ -5,24 +5,25 @@
         <?php endif; ?>
     </div>
     <table>
+    <caption class="sr"><?php echo $this->kga['lang']['timesheetSummary'] ?></caption>
         <tbody>
         <tr>
-            <td class="option">&nbsp;</td>
-            <td class="date"><?php echo $this->kga['lang']['datum'] ?></td>
-            <td class="from"><?php echo $this->kga['lang']['in'] ?></td>
-            <td class="to"><?php echo $this->kga['lang']['out'] ?></td>
-            <td class="time"><?php echo $this->kga['lang']['time'] ?></td>
+            <th class="option"><?php echo $this->kga['lang']['actions'] ?></th>
+            <th scope="col" class="date"><?php echo $this->kga['lang']['datum'] ?></th>
+            <th scope="col"  class="from"><?php echo $this->kga['lang']['in'] ?></th>
+            <th scope="col"  class="to"><?php echo $this->kga['lang']['out'] ?></th>
+            <th scope="col"  class="time"><?php echo $this->kga['lang']['time'] ?></th>
             <?php if ($this->showRates): ?>
-                <td class="wage"><?php echo $this->kga['lang']['wage'] ?></td>
+                <th scope="col"  class="wage"><?php echo $this->kga['lang']['wage'] ?></th>
             <?php endif; ?>
-            <td class="customer"><?php echo $this->kga['lang']['customer'] ?></td>
-            <td class="project"><?php echo $this->kga['lang']['project'] ?></td>
-            <td class="activity"><?php echo $this->kga['lang']['activity'] ?></td>
+            <th scope="col" class="customer"><?php echo $this->kga['lang']['customer'] ?></th>
+            <th scope="col"  class="project"><?php echo $this->kga['lang']['project'] ?></th>
+            <th scope="col"  class="activity"><?php echo $this->kga['lang']['activity'] ?></th>
             <?php if ($this->showTrackingNumber) { ?>
-                <td class="description"><?php echo $this->kga['lang']['description'] ?></td>
-                <td class="trackingnumber"><?php echo $this->kga['lang']['trackingNumber'] ?></td>
+                <th scope="col"  class="description"><?php echo $this->kga['lang']['description'] ?></th>
+                <th scope="col"  class="trackingnumber"><?php echo $this->kga['lang']['trackingNumber'] ?></th>
             <?php } ?>
-            <td class="username"><?php echo $this->kga['lang']['username'] ?></td>
+            <th scope="col"  class="username"><?php echo $this->kga['lang']['username'] ?></th>
         </tr>
 				<?php echo $this->timeSheet_display ?>
 <script type="text/javascript">
