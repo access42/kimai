@@ -7,4 +7,5 @@ autoconf.php
 .idea/
 .DS_Store
 core/installer
+core/--installer
 core/skins/a11y-back
