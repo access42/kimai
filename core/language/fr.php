@@ -48,6 +48,7 @@ return array(
     "out" => "Sortie",
     "time" => "h:m",
     "timelabel" => "Temps",
+    "timesheetSummary" => "Temps travaillé récapitulatif",
     "starttime" => "démarrage",
     "DateTimeNotInFuture" => "Le jour et l'heure ne peuvent être dans le futur.",
     "durationlabel" => "Durée",
