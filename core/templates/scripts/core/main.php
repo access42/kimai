@@ -307,20 +307,6 @@
         </ul>
     </div>
     
-    <div id="gui">
-    	<div id="extdiv_0" class="ext ki_timesheet"></div>
-        <?php
-            for ($i = 0; $i < count($this->extensions); $i++)
-            {
-                if ($this->extensions[$i] != "ki_timesheet")
-                {
-                    ?>
-                    <div id="extdiv_<?php echo $i+1; ?>" class="ext <?php echo $this->extensions[$i]['key']?>" style="display:none;"></div>
-                    <?php
-                }
-            }
-        ?>
-    </div>
 
 <div class="lists clear" style="display:none">
 
@@ -390,6 +376,21 @@
 		<div id="customersShrink">&nbsp;</div>-->
 </div>
     
+		
+    <div id="gui">
+    	<div id="extdiv_0" class="ext ki_timesheet"></div>
+        <?php
+            for ($i = 0; $i < count($this->extensions); $i++)
+            {
+                if ($this->extensions[$i] != "ki_timesheet")
+                {
+                    ?>
+                    <div id="extdiv_<?php echo $i+1; ?>" class="ext <?php echo $this->extensions[$i]['key']?>" style="display:none;"></div>
+                    <?php
+                }
+            }
+        ?>
+    </div>
     <div id="loader">&nbsp;</div>
     
 	<div id="floater">floater</div>
