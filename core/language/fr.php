@@ -565,7 +565,9 @@ Choisissez un autre préfixe de table ou supprimez les tables existantes avec ce
         'invoiceButton' => 'Créer',
         'noData' => 'Il n\' y a pas de données de temps pour le projet et la période choisis.',
         'noProject' => 'Aucun projet n\'a été sélectionné.',
-        'defaultVat' => 'TVA par défaut'
+        'defaultVat' => 'TVA par défaut',
+        'roundValueLabel' => 'Sélectionner un arrondi',
+        'selectEntrieLabel' => 'Sélectionner les événements à inclure',
     ),
 
     'ext_budget' => array(
