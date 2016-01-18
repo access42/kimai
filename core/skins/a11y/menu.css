@@ -14,7 +14,7 @@
 .menuBackground {
     /*background:url("grfx/g3_tab_bar.png") repeat-x;*/
     background-color:#594F4F;
-    height:35px;
+
 }
 
 .menu li:not(.ui-state-active) a.tabError span.bb {
@@ -108,12 +108,12 @@
 /* nuevo */
 
 .menu {
+	width:98%;
+	margin:auto;
   text-align: center;
   list-style: none;
-  margin: 0;
-  padding-left: 15px;
   line-height: 15px;
-  height: 37px;
+
   overflow: hidden;
   font-size: 12px;
   /* font-family: arial; */

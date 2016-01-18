@@ -1,3 +1,31 @@
-div.ki_timesheet th {
-	color:#fff
+div.ki_timesheet tr th {
+	color:#fff;
+}
+div.ki_timesheet tr td{
+	color:#000!important
+}
+div#timeSheet_head div.left{
+	position:relative!important;
+	top:0!important;
+	left:0!important;
+}
+
+#timeSheet_head{
+	width:98%!important;
+	position:relative!important;
+	margin:auto;
+	left:auto!important;
+}
+
+#timeSheet_head table{
+	width:100%;
+}
+
+#extdiv_0{
+	height:auto!important;
+}
+
+
+#invoice_extension_header{
+	height:auto!important
 }

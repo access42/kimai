@@ -16,6 +16,12 @@
 	top:auto!important;
 }
 
+#users, #customers, #projects, #activities{
+
+	height:8em!important;
+	overflow:auto
+}
+
 #users_head, #customers_head, #projects_head, #activities_head,
 #timeSheet_head {
     background: #473F3F !important;
