@@ -46,49 +46,51 @@ if ($this->timeSheetEntries)
             <tr id="timeSheetEntry<?php echo $row['timeEntryID']?>" class="<?php echo $this->cycle(array("odd","even"))->next()?> active">
         <?php endif; ?>
 
-        <td nowrap class="option <?php echo $tdClass; ?>">
+            <th class="trackingnumber <?php echo $tdClass; ?>" scope="row">
+              <?php echo $row['timeEntryID']?>
+            </th>
+        <td class="option <?php echo $tdClass; ?>">
 
         <?php if (isset($this->kga['user'])): // only users can see options ?>
 
             <?php if ($row['end']): // Stop oder Record Button? ?>
 
             <?php if ($this->kga['show_RecordAgain']): ?>
-              <a onclick="ts_ext_recordAgain(<?php echo $row['projectID']?>,<?php echo $row['activityID']?>,<?php echo $row['timeEntryID']?>); return false;"
-                 href ="#" class="recordAgain"><img src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_recordthis.gif'
-                 width='13' height='13' alt='<?php echo $this->kga['lang']['recordAgain']?>' title='<?php echo $this->kga['lang']['recordAgain']?> (ID:<?php echo $row['timeEntryID']?>)' border='0' /></a>
+              <button onclick="ts_ext_recordAgain(<?php echo $row['projectID']?>,<?php echo $row['activityID']?>,<?php echo $row['timeEntryID']?>); return false;"
+                  title="<?php echo $this->kga['lang']['recordAgain']?> <?php echo $row['timeEntryID']?>" class="recordAgain"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_recordthis.gif"
+                 width="13" height="13" alt="<?php echo $this->kga['lang']['recordAgain']?>  <?php echo $row['timeEntryID']?>" /></button>
             <?php endif; ?>
 
         <?php else: ?>
 
-            <a href ='#' class='stop' onclick="ts_ext_stopRecord(<?php echo $row['timeEntryID']?>); return false;"><img
-                    src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_stopthis.gif' width='13'
-                    height='13' alt='<?php echo $this->kga['lang']['stop']?>' title='<?php echo $this->kga['lang']['stop']?> (ID:<?php echo $row['timeEntryID']?>)' border='0' /></a>
+            <button class="stop" onclick="ts_ext_stopRecord(<?php echo $row['timeEntryID']?>); return false;"  title="<?php echo $this->kga['lang']['stop']?>  <?php echo $row['timeEntryID']?>" ><img
+                    src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_stopthis.gif" width="13"
+                    height="13" alt="<?php echo $this->kga['lang']['stop']?>  <?php echo $row['timeEntryID']?>"/></button>
 
         <?php endif; ?>
 
 
       <?php if ($this->kga['conf']['editLimit'] == "-" || time()-$row['end'] <= $this->kga['conf']['editLimit']):
     //Edit Record Button ?>
-        <a href ='#' onclick="editRecord(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"
-           title='<?php echo $this->kga['lang']['edit']?>'><img
-           src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/edit2.gif' width='13' height='13'
-           alt='<?php echo $this->kga['lang']['edit']?>' title='<?php echo $this->kga['lang']['edit']?>' border='0' /></a>
+        <button onclick="editRecord(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"
+           title="<?php echo $this->kga['lang']['edit']?> <?php echo $row['timeEntryID']?>"><img
+           src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/edit2.gif" width="13" height="13"
+           alt="<?php echo $this->kga['lang']['edit']?>  <?php echo $row['timeEntryID']?>"/></button>
       <?php endif; ?>
 
         <?php if ($this->kga['conf']['showQuickNote'] > 0):
             //Edit quick-note Button ?>
-            <a href='#' onclick="editQuickNote(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"
-               title='<?php echo $this->kga['lang']['editNote']?>'><img 
-                    src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/editor_icon.png' width='14' height='14'
-                    alt='<?php echo $this->kga['lang']['editNote']?>' title='<?php echo $this->kga['lang']['editNote']?>' border='0' /></a>
+            <button onclick="editQuickNote(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"
+               title="<?php echo $this->kga['lang']['editNote']?> <?php echo $row['timeEntryID']?>"><img 
+                    src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/editor_icon.png" width="14" height="14"
+                    alt="<?php echo $this->kga['lang']['editNote']?>  <?php echo $row['timeEntryID']?>"/></button>
         <?php endif; ?>
 
       <?php if ($this->kga['conf']['quickdelete'] > 0):
     // quick erase trashcan  ?>
-        <a href ='#' class='quickdelete' onclick="quickdelete(<?php echo $row['timeEntryID']?>); return false;"><img
-            src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_trashcan.png' width='13'
-            height='13' alt='<?php echo $this->kga['lang']['quickdelete']?>' title='<?php echo $this->kga['lang']['quickdelete']?>'
-            border=0 /></a>
+        <button class="quickdelete" onclick="quickdelete(<?php echo $row['timeEntryID']?>); return false;" title="<?php echo $this->kga['lang']['quickdelete']?>  <?php echo $row['timeEntryID']?>"><img
+            src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/button_trashcan.png" width="13"
+            height="13" alt="<?php echo $this->kga['lang']['quickdelete']?>  <?php echo $row['timeEntryID']?>" /></button>
       <?php endif; ?>
 
     <?php endif; ?>
@@ -159,13 +161,19 @@ if ($this->timeSheetEntries)
 
                 <?php if ($row['comment']): ?>
                     <?php if ($row['commentType'] == '0'): ?>
-                                        <a href="#" onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase.gif' width="12" height="13" title='<?php echo $this->escape($row['comment'])?>' border="0" /></a>
+                        <button title="<?php echo $this->escape($row['comment'])?>" onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase.gif" width="12" height="13" aria-expanded="false" /></button>
                     <?php elseif ($row['commentType'] == '1'): ?>
-                                        <a href="#" onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase_sys.gif' width="12" height="13" title='<?php echo $this->escape($row['comment'])?>' border="0" /></a>
+                        <button  title="<?php echo $this->escape($row['comment'])?>" onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase_sys.gif" width="12" height="13"  aria-expanded="false"/></button>
                     <?php elseif ($row['commentType'] == '2'): ?>
-                                        <a href="#" onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase_caution.gif' width="12" height="13" title='<?php echo $this->escape($row['comment'])?>' border="0" /></a>
+                        <button title="<?php echo $this->escape($row['comment'])?>"  onclick="ts_comment(<?php echo $row['timeEntryID']?>); $(this).blur(); return false;"><img src="../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase_caution.gif" width="12" height="13" aria-expanded="false"/></button>
                     <?php endif; ?>
                 <?php endif; ?>
+                
+								<?php if ($row['comment']): ?>
+								    <div id="c<?php echo $row['timeEntryID']?>" class="comm<?php echo $this->escape($row['commentType'])?>" <?php if ($this->hideComments): ?> style="display:none" <?php endif; ?> >
+								      <?php echo nl2br($this->escape($row['comment']))?>
+								    </div>
+								<?php endif; ?>
             </td>
 
             <?php if ($this->showTrackingNumber) { ?>
@@ -174,9 +182,6 @@ if ($this->timeSheetEntries)
                 <?php if ($row['description']): ?>
                 <a href="#" onclick="$(this).blur();  return false;" ><img src='../skins/<?php echo $this->escape($this->kga['conf']['skin'])?>/grfx/blase_sys.gif' width="12" height="13" title='<?php echo $this->escape($row['description'])?>' border="0" /></a>
               <?php endif; ?>
-            </td>
-            <td class="trackingnumber <?php echo $tdClass; ?>">
-                <?php echo $this->escape($row['trackingNumber']) ?>
             </td>
             <?php } ?>
 
@@ -190,11 +195,6 @@ if ($this->timeSheetEntries)
 
         </tr>
 
-        <?php if ($row['comment']): ?>
-            <tr id="c<?php echo $row['timeEntryID']?>" class="comm<?php echo $this->escape($row['commentType'])?>" <?php if ($this->hideComments): ?> style="display:none" <?php endif; ?> >
-                        <td colspan="11"><?php echo nl2br($this->escape($row['comment']))?></td>
-            </tr>
-        <?php endif; ?>
 
                 <?php
                 $day_buffer = strftime("%d",$row['start']);
@@ -205,7 +205,7 @@ if ($this->timeSheetEntries)
 
                 </tbody>
             </table>
-        </div>
+
     <?php
 }
 else
