@@ -8,7 +8,10 @@
     <caption class="sr"><?php echo $this->kga['lang']['timesheetSummary'] ?></caption>
         <tbody>
         <tr>
-            <th class="option"><?php echo $this->kga['lang']['actions'] ?></th>
+            <?php if ($this->showTrackingNumber) { ?>
+            <th scope="col"  class="trackingnumber"><?php echo $this->kga['lang']['trackingNumber'] ?></th>
+            <?php } ?>
+            <th class="option" scope="col"><?php echo $this->kga['lang']['actions'] ?></th>
             <th scope="col" class="date"><?php echo $this->kga['lang']['datum'] ?></th>
             <th scope="col"  class="from"><?php echo $this->kga['lang']['in'] ?></th>
             <th scope="col"  class="to"><?php echo $this->kga['lang']['out'] ?></th>
@@ -21,7 +24,7 @@
             <th scope="col"  class="activity"><?php echo $this->kga['lang']['activity'] ?></th>
             <?php if ($this->showTrackingNumber) { ?>
                 <th scope="col"  class="description"><?php echo $this->kga['lang']['description'] ?></th>
-                <th scope="col"  class="trackingnumber"><?php echo $this->kga['lang']['trackingNumber'] ?></th>
+
             <?php } ?>
             <th scope="col"  class="username"><?php echo $this->kga['lang']['username'] ?></th>
         </tr>
@@ -31,3 +34,4 @@
         ts_ext_onload();
     });
 </script>
+
